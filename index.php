@@ -92,4 +92,19 @@
         ";
         unset($_SESSION['loginIn']);
     }
+    if (isset($_SESSION['cerrarSesion'])==1) {
+        echo "
+            <script>
+                // alert('Sesión cerrada con exito');
+                swal({
+                    title:'Sesión cerrada con exito',
+                    text:'Lo esperaremos para su siguiente visita',
+                    icon:'success',
+                    button:'Aceptar',
+                });
+                // swal('insertado con exito');
+            </script>
+        ";
+        unset($_SESSION['cerrarSesion']);
+    }
 ?>
