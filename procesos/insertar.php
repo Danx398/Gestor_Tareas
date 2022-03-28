@@ -11,7 +11,7 @@
     $datos=array($usuario,$contra,$nombre,$apellidoP,$apellidoM);
 
     $obj=new metodos();
-    if ($obj->agregarDatos($datos)==1) {
+    if ($obj->agregarDatosUsuario($datos)==1) {
         $_SESSION['insertado']=1;
         header("location:../index.php");
     }else{

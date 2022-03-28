@@ -25,6 +25,7 @@
 
       <?php
         require_once "./main/nav.php";
+        require_once "./crearTarea.php";
       ?>
       <!-- <a href="../procesos/usuarios/salir.php">Salir</a> -->
     <!-- Bootstrap JavaScript Libraries -->
@@ -47,6 +48,36 @@
           </script>
       ";
       unset($_SESSION['login']);
+  }
+  if (isset($_SESSION['insertadoTarea'])==1) {
+    echo "
+          <script>
+              // alert('Insertado con exito');
+              swal({
+                  title:'Insertado con exito',
+                  text:':D',
+                  icon:'success',
+                  button:'Aceptar',
+              });
+              // swal('insertado con exito');
+          </script>
+      ";
+      unset($_SESSION['insertadoTarea']);
+  }
+  if (isset($_SESSION['eliminarTarea'])==1) {
+    echo "
+          <script>
+              // alert('Elimonado con exito');
+              swal({
+                  title:'Eliminado con exito',
+                  text:':D',
+                  icon:'success',
+                  button:'Aceptar',
+              });
+              // swal('insertado con exito');
+          </script>
+      ";
+      unset($_SESSION['eliminarTarea']);
   }
     }else{
         header("location:../index.php");
