@@ -5,7 +5,7 @@
 
     define('DEP_CSS',SERVIDOR."public/css/");
     define('DEP_SCRIPT',SERVIDOR."public/js/");
-
+    define('CONTROLL',SERVIDOR."controller/");
     define('error',"view/error/error.php");
 
     define("direccion",array(

@@ -27,5 +27,18 @@
             $sql= "DELETE from t_tarea where id='$id'";
             return $result=mysqli_query($conexion,$sql);
         }
+        public function actualizarDatos($datos){
+            $c=new Conexion();
+            $conexion=$c->conectar();
+            $sql = "UPDATE t_tarea SET nombre_tarea='$datos[0]',
+                                       fecha_fin='$datos[1]',
+                                       hora_fin='$datos[2]',
+                                       Comentarios='$datos[3]' where id='$datos[4]'";
+            $result=mysqli_query($conexion,$sql);
+            return $result;
+        }
+        public function cambiarEstado(){
+            
+        }
     }
 ?>
